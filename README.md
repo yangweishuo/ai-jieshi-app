@@ -79,7 +79,7 @@ vue3-ai-jieshi-app/
 
 3. 启动开发服务器
    ```bash
-   npm run servue
+   npm run serve
    ```
 
 4. 构建生产版本
