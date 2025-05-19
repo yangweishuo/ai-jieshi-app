@@ -1,0 +1,154 @@
+/* 戒视 APP - 基础样式文件 */
+
+:root {
+  /* 主色调 */
+  --primary-color: #2ECC71; /* 健康绿 */
+  --secondary-color: #1E88E5; /* 科技蓝 */
+  --accent-color: #7C4DFF; /* 紫色 */
+  --warning-color: #E74C3C; /* 警示红 */
+  --dark-blue: #333F50; /* 深邃蓝灰 */
+  --light-text: #FFFFFF;
+  --dark-text: #333333;
+  
+  /* 渐变 */
+  --primary-gradient: linear-gradient(135deg, #2ECC71, #1E88E5);
+  --blue-gradient: linear-gradient(135deg, #304FFE, #7C4DFF);
+  --dark-gradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
+  
+  /* 字体 */
+  --main-font: 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+  --title-font: 'Bebas Neue', 'Impact', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--main-font);
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: var(--dark-text);
+  line-height: 1.6;
+}
+
+#app {
+  font-family: var(--main-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  width: 100%;
+}
+
+/* 通用组件样式 */
+.btn {
+  padding: 12px 24px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: var(--primary-gradient);
+  color: white;
+  box-shadow: 0 4px 10px rgba(46, 204, 113, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(46, 204, 113, 0.4);
+}
+
+.btn-secondary {
+  background: var(--blue-gradient);
+  color: white;
+  box-shadow: 0 4px 10px rgba(30, 136, 229, 0.3);
+}
+
+.card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  margin-bottom: 15px;
+}
+
+/* 动画效果 */
+@keyframes shine {
+  0% {
+    transform: translateX(-300%) translateY(-300%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(300%) translateY(300%) rotate(45deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-100px) translateX(50px) scale(1.5);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-200px) translateX(0) scale(1);
+    opacity: 0;
+  }
+}
+
+/* 全局图标样式 */
+.tech-icon {
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-icon-fill {
+  fill: rgba(30, 136, 229, 0.7);
+  stroke: #1E88E5;
+  stroke-width: 1;
+  filter: drop-shadow(0 0 3px rgba(30, 136, 229, 0.5));
+}
+
+.tech-icon-pulse {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+}
+
+.tech-icon-spin {
+  animation: spin 2s linear infinite;
+} 
