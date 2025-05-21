@@ -170,11 +170,11 @@ vue3-ai-jieshi-app/
 [MIT](LICENSE)
 
 ## 联系方式
+![643da52e949a3c5ed7523ec1f2aa4fe.jpg](public%2F643da52e949a3c5ed7523ec1f2aa4fe.jpg)
 
-如有任何问题或建议，请通过以下方式联系我们：
 
-- 电子邮件：contact@jieshi-app.com
-- 官方网站：www.jieshi-app.com
+## 赞助
+![bdc21a9fc38f2a507ac8a78c8f9a530.jpg](public%2Fbdc21a9fc38f2a507ac8a78c8f9a530.jpg)
 
 ---
 
