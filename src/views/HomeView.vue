@@ -214,6 +214,24 @@ export default {
       this.isCheckedIn = true
       // 触发打卡动画效果
       this.createParticleExplosion()
+      
+      // 更新连续打卡天数并保存到localStorage
+      const checkinData = JSON.parse(localStorage.getItem('checkinData') || '{"continuousDays": 0}')
+      checkinData.continuousDays = (checkinData.continuousDays || 0) + 1
+      checkinData.lastCheckin = this.today
+      localStorage.setItem('checkinData', JSON.stringify(checkinData))
+      
+      // 跳转到打卡详情页面，带上参数
+      setTimeout(() => {
+        this.$router.push({
+          path: '/checkin',
+          query: {
+            from: 'home',
+            justCheckedIn: 'true',
+            continuousDays: checkinData.continuousDays.toString()
+          }
+        })
+      }, 1000)
     },
     createParticleExplosion() {
       // 创建粒子爆炸效果

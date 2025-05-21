@@ -19,17 +19,22 @@ const routes = [
   {
     path: '/checkin',
     name: 'CheckIn',
-    component: () => import('../views/CheckInView.vue')
+    component: () => import('../views/CheckInView.vue'),
+    props: route => ({
+      fromPage: route.query.from || 'home',
+      justCheckedIn: route.query.justCheckedIn === 'true',
+      initialContinuousDays: parseInt(route.query.continuousDays) || 3
+    })
   },
   {
     path: '/profile',
     name: 'Profile',
-    component: () => import('../views/UnderConstructionView.vue')
+    component: () => import('../views/ProfileView.vue')
   },
   {
     path: '/focus',
-    name: 'Focus',
-    component: () => import('../views/UnderConstructionView.vue')
+    name: 'Statistics',
+    component: () => import('../views/StatisticsView.vue')
   },
   {
     path: '/403',

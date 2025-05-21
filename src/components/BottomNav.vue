@@ -22,7 +22,7 @@ export default {
     return {
       navItems: [
         { path: '/home', label: '首页', icon: 'Home', pulse: false },
-        { path: '/focus', label: '统计', icon: 'ChartLine', pulse: false },
+        { path: '/focus', label: '统计', icon: 'TrendingUp', pulse: false },
         { path: '/checkin', label: '社交圈', icon: 'People', pulse: true },
         { path: '/profile', label: '我的', icon: 'User', pulse: false }
       ]

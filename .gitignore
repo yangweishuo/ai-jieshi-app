@@ -1,7 +1,7 @@
 .DS_Store
 node_modules
 /dist
-
+/ui_design
 
 # local env files
 .env.local
@@ -12,6 +12,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+DEVELOPMENT.md*
+DEVELOPMENT_EN.md*
 
 # Editor directories and files
 .idea
